@@ -4,10 +4,10 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import leaf from "../../Assets/Projects/leaf.png";
 import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
+import youtube from "../../Assets/Projects/youtube.png";
 import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import middleearth from "../../Assets/Projects/middleearth.png";
+import heatmap from '../../Assets/Projects/heatmap.png'
 
 function Projects() {
   return (
@@ -23,34 +23,34 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={heatmap}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="EPPDA"
+              description="A hybrid system consisting of a civilian mobile app through which a civilian can signup/login to report crimes based on location. The request will be forwarded to Police station' s website according to the location of the crime. Now from there the crime will be forwarded to the nearest patrolling police officer's app. The police officer can give update reports that will be conveyed to Admin and Police station's website and from there they will be forwarded to civilian's app. Now if a civilian reports a crime by simple calling, the call will be made to the dispatcher who will then fill the crime form and forward it to police station and the rest of the process will be the same. There will be an admin website which will be responsible for creating, updating and deleting Dispatcher, Police station and Police officer's accounts. The statistics of received/solved crimes will be shown to the admin in the form of HeatMap and Graph. An ML module will be implemented in which we will train the models on the faces of wanted criminals. Now Police app will have a feature to implement this model by taking a pic of a suspect and then running it through the model to find similarities between the taken suspect pic and those already present in database."
+              ghLink="On a Private Repo"
+             
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={middleearth}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
+              title="MiddleEarth BookShop"
+              description="A mobile app created for a bookshop owners. It keeps tracks of all the bookshop inventory including which books are sold and which are in stock. It also keeps track of the customers and their orders. It also has a feature to add new books to the inventory. It also has a feature to view all the sales and sales can be sorted on the basis of either dates or the name of books. To create this application I used React Native and Firebase. "
               ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={youtube}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="Youtube Clone"
+              description="Crafted a captivating YouTube Clone with React Native, Rapid API, and Tailwind CSS. This UI clone mirrors the familiar aesthetics of the original platform, offering an immersive experience for users. Leveraging React Native, the app seamlessly fetches homepage videos through Rapid API, providing dynamic and up-to-date content. The integration of Tailwind CSS ensures a modern and visually appealing design. This project showcases my adeptness in mobile app development and API integration, emphasizing a commitment to delivering engaging and user-friendly applications."
+              ghLink="https://github.com/Muhammad-Bilal-Arshad/Youtube-Clone-ReactNative"
+                           
             />
           </Col>
 
