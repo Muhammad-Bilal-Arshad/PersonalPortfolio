@@ -7,14 +7,14 @@ import logo from "../Assets/BILAL-removebg-preview.png";
 import { Link } from "react-router-dom";
 
 import {
-  AiFillStar,
+
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
-
+import { BsPersonWorkspace } from "react-icons/bs";
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
@@ -80,6 +80,15 @@ function NavBar() {
                 Projects
               </Nav.Link>
             </Nav.Item>
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/experience"
+                onClick={() => updateExpanded(false)}
+              >
+                <BsPersonWorkspace  style={{ marginBottom: "2px" }} /> Experience
+              </Nav.Link>
+            </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
@@ -90,6 +99,8 @@ function NavBar() {
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
             </Nav.Item>
+
+           
 
          
 
