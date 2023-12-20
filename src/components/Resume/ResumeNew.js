@@ -9,17 +9,23 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
   const [width, setWidth] = useState(1200);
 
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
 
+  const onDocumentLoadSuccess = ({ numPages }) => {
+    setNumPages(numPages);
+  };
+
   return (
     <div>
       <Container fluid className="resume-section">
         <Particle />
-        <Row style={{ justifyContent: "center", position: "relative" }}>
+        <Row className="justify-content-center" style={{ position: "relative" }}>
           <Button
             variant="primary"
             href={pdf}
@@ -32,12 +38,21 @@ function ResumeNew() {
         </Row>
 
         <Row className="resume">
-          <Document file={pdf} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+          <Document
+            file={pdf}
+            className="d-flex justify-content-center align-items-center"
+            onLoadSuccess={onDocumentLoadSuccess}
+          >
+            {Array.from(new Array(numPages), (el, index) => (
+              <Page
+                key={`page_${index + 1}`}
+                pageNumber={index + 1}
+                scale={width > 786 ? 1.3 : 0.6}
+                style={{ margin: "20px" }} 
+              />
+            ))}
           </Document>
         </Row>
-
-    
       </Container>
     </div>
   );
